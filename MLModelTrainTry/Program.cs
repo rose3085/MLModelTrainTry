@@ -14,13 +14,13 @@ namespace MLModelTrainTry
             MLContext mlContext = new MLContext();
             
             //load training data
-
             var splitDataView = LoadData(mlContext).TestSet;  //.TestSet conver splitview to IDataview
             IDataView trainingData = splitDataView;
 
             //check if we need to rebuilt the model
             string dataModelPath = Path.Combine(Environment.CurrentDirectory, "MlModels", "SentimentModel.zip");
             var hasSchemaChanged = HasSchemaChanged(mlContext, dataModelPath, trainingData);
+
             //create training pipeline and train model
             if (hasSchemaChanged)
             {
@@ -39,11 +39,13 @@ namespace MLModelTrainTry
             {
                 var modelPath = GetModelPath();
                 var model = mlContext.Model.Load(modelPath, out _);
+
                 //create new prediction
                 CreatePrediction(mlContext, model);
             }
 
         }
+
         static TrainTestData LoadData(MLContext mlContext)
         {
 
