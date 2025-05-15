@@ -9,6 +9,7 @@ namespace MLModelTrainTry
 
     internal static class program {
 
+
         static void Main(string[] args)
         {
             MLContext mlContext = new MLContext();
