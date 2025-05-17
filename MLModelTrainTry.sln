@@ -5,7 +5,9 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentimentAnalysis", "MLModelTrainTry\SentimentAnalysis.csproj", "{C4195939-6922-486F-834B-8DD66FD3C23B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PricePrediction", "PricePrediction\PricePrediction.csproj", "{BB340D2A-B33E-4F56-9092-26808AFCE4DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PricePrediction", "PricePrediction\PricePrediction.csproj", "{BB340D2A-B33E-4F56-9092-26808AFCE4DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IrisClustering", "IrisClustering\IrisClustering.csproj", "{3701BCE2-2EA8-450F-B08C-FF51B3BB11F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BB340D2A-B33E-4F56-9092-26808AFCE4DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB340D2A-B33E-4F56-9092-26808AFCE4DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB340D2A-B33E-4F56-9092-26808AFCE4DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3701BCE2-2EA8-450F-B08C-FF51B3BB11F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3701BCE2-2EA8-450F-B08C-FF51B3BB11F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3701BCE2-2EA8-450F-B08C-FF51B3BB11F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3701BCE2-2EA8-450F-B08C-FF51B3BB11F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
