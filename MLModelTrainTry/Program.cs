@@ -1,6 +1,7 @@
 ﻿using Microsoft.ML;
 using Microsoft.ML.Data;
 using MLModelTrainTry.Model.SentimentAnalysis;
+using MLModelTrainTry.TestData;
 using System.Reflection;
 using static Microsoft.ML.DataOperationsCatalog;
 
@@ -8,6 +9,7 @@ namespace MLModelTrainTry
 {
 
     internal static class program {
+
 
         static void Main(string[] args)
         {
@@ -75,19 +77,11 @@ namespace MLModelTrainTry
 
         static void CreatePrediction(MLContext mlContext, ITransformer model)
         {
-            var sampleStatement = new SentimentData()
-            {
-                SentimentText = "This was a very bad steak",
-            };
-            PredictionEngine<SentimentData, SentimentPrediction> predictionFunction = mlContext.Model.CreatePredictionEngine<SentimentData, SentimentPrediction>(model);
-            var resultPrediction = predictionFunction.Predict(sampleStatement);
-            Console.WriteLine();
-            Console.WriteLine("=============== Prediction Test of model with a single sample and test dataset ===============");
+           
+             PredictionEngine<SentimentData, SentimentPrediction> predictionFunction = mlContext.Model.CreatePredictionEngine<SentimentData, SentimentPrediction>(model);
+            var resultPrediction = predictionFunction.Predict(TestSentimentData.sampleStatement);
 
-            Console.WriteLine();
             Console.WriteLine($"Sentiment: {resultPrediction.SentimentText} | Prediction: {(Convert.ToBoolean(resultPrediction.Prediction) ? "Positive" : "Negative")} | Probability: {resultPrediction.Probability} ");
-
-            Console.WriteLine("=============== End of Predictions ===============");
             Console.WriteLine();
         }
 
