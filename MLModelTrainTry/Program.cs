@@ -39,6 +39,7 @@ namespace MLModelTrainTry
             }
             else
             {
+                //use existing model
                 var modelPath = GetModelPath();
                 var model = mlContext.Model.Load(modelPath, out _);
 
